@@ -1,0 +1,3 @@
+The answer to the question is using CI and CD stand for continuous integration and continuous delivery/continuous deployment. In very simple terms, CI is a modern software development practice in which incremental code changes are made frequently and reliably.
+
+we needed to implement an API version negotiation mechanism. I  have implementd a v1 version of the api to address the solution to the question

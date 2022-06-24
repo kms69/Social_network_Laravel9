@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "90d5d9b2-0221-4bb9-9ac3-2c2affb5ed8f",
+		"name": "Social",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17608241"
+	},
+	"item": [
+		{
+			"name": "User/Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=ali&email=ali@example.com&confirmation_password=123456&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali"
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com"
+						},
+						{
+							"key": "confirmation_password",
+							"value": "123456"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTE0ZjFlNTNlMjNmOTZlMzI0MThhYzdjNmUxNTc5NTU3NTQxNzFlYmY5M2U3ZWQwZTE1MTExN2Q1MDY3MjhkMjdmYTc3YjY4Y2MyNjkxMGQiLCJpYXQiOjE2NTM3Mzk3ODYuMjcxNDk4LCJuYmYiOjE2NTM3Mzk3ODYuMjcxNTA2LCJleHAiOjE2ODUyNzU3ODYuMjY0MDQxLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.dEkDHeigBSBjQxqJ4jADIZxGJrtEfyPX8eaJb2auOHS_pZI2JMLahEOk706-2dQp_4ef8QJHX0derROUc5SH82tWpeXa03dcCf3OFEMsmohgTytgP6wQLNn6Ct9_Oj0H9gq2lEv5W6rhuF6rqNpR0rYWzm1h69k-rnbvfqu8BnSiWbnA-dRkMM4V03Oa08WiS7dkH8ryL5uCNTebAcnlxJFh4AezYN0KnBYlwvu9sdnq2PvCi5un1epMflRXLZqGlv1qIke276wxG0XozdUwortSjyVochJE1BufzcLmPw3k_9nAYlih_qXCTt8vkLTZ9LkBRdEga9A4fNuVICyyBXOub9c9YuO6Vwse5j3fp9nzcmOdGbwfOjee6wC2HxXG54DYGpL0QLTQ7dUQYtvOarquIvsAxvGm_YYygu5qfJfFDRnuqUiLMmtMn_Kc-2AVwu5VUbjS3JJhfneE-O_3oTEg4PUn82DiXYRJIZ1389NgslXXkp5J0TA6RixLN88VW88W_pII0Q2AWP2N4JO0ecWgjInA59I_KIt5jKMBwakaPzg3ZEzN90rDd5hRiiH6vXqwy8awC1Xs-6pedDbVqQGjro45oJBQFZsdvhTJSdWkLT-c0GpLAwpBB-0Si38pZOShRMkL_pdATiUeoEa-D4Ie-CTvE1pLLtT5iOKB8So",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=ali@example.com&confirmation_email=123456&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com"
+						},
+						{
+							"key": "confirmation_email",
+							"value": "123456"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/follow",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWJjOTNkNDdjNmY1OTYwODM5YWU5NWNiMzYxZTExZWM1ZTRjZDIyMjdiMTQ4YmJlMDllMzBjYmY2Mjc5ZjdjYzA0ZTUxYWU3YTk1OTcyODQiLCJpYXQiOjE2NTU5ODM1NjQuMTQyNzc2LCJuYmYiOjE2NTU5ODM1NjQuMTQyNzg0LCJleHAiOjE2ODc1MTk1NjQuMTM0MzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.UyUE6H35A7LmId-MaC2pvC1djKEw7QYdNlsMfahgIRdp4d9-9fDn2GksEWKwp__9S8D7zcKoqPzl3g5gGavFWvymfJECLwMnGYbDqzrtM4LIycPvDHN1Yu4NQSpnWdkQYsINOMwVV82k0RnekH4hHhq9Rcr-B75xNIkzgAxznHmPlZbY9PoHxdGX2nB5y5Yt4EoPbdCEwJN2IsDkZAjgCwCozggMhC3iSSyyGxjQ7s3oEZxVjD-3mUOOj86VxF9mmSQ_XAntoKau8wVhPgnbt90V35VjbPYbX0DQUkNXD8PXm1EUNSofB8yFmHUJD0cZQsKSx8HT9s6uB3oeRmdNreiXYFtPiJVEkvxW2X2rDim9zvCKzafdqOFu2eIcpXUtSVtql6fduNZjx7Z81EQt8LRmWQPNoNDkUgAQD3gfTN70YoHgO3LRTd2v_hz9LERsLzIOP8QVOJxiJJEfcXK6kPprhC5mXvMPoWJDW1HBVAyAmcjtvLxTPn5OVOPIC43tGEoGWTRW6mFAeBL3hndnJ4_AFWcXemWM4I0dD-VOMElRcZqPTcNRF9UhMCUIzMSffii3du0ECmLRJ1wV7XaNRHdre6dBCGFpKS62pSgcVYHHxKoTIaOY3mvM2X6AkuVy9MHZQ_PiH0BwXayDFoZvK915AeYcKL_o0RFu8_ZvCoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_1",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_2",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/unfollow",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWJjOTNkNDdjNmY1OTYwODM5YWU5NWNiMzYxZTExZWM1ZTRjZDIyMjdiMTQ4YmJlMDllMzBjYmY2Mjc5ZjdjYzA0ZTUxYWU3YTk1OTcyODQiLCJpYXQiOjE2NTU5ODM1NjQuMTQyNzc2LCJuYmYiOjE2NTU5ODM1NjQuMTQyNzg0LCJleHAiOjE2ODc1MTk1NjQuMTM0MzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.UyUE6H35A7LmId-MaC2pvC1djKEw7QYdNlsMfahgIRdp4d9-9fDn2GksEWKwp__9S8D7zcKoqPzl3g5gGavFWvymfJECLwMnGYbDqzrtM4LIycPvDHN1Yu4NQSpnWdkQYsINOMwVV82k0RnekH4hHhq9Rcr-B75xNIkzgAxznHmPlZbY9PoHxdGX2nB5y5Yt4EoPbdCEwJN2IsDkZAjgCwCozggMhC3iSSyyGxjQ7s3oEZxVjD-3mUOOj86VxF9mmSQ_XAntoKau8wVhPgnbt90V35VjbPYbX0DQUkNXD8PXm1EUNSofB8yFmHUJD0cZQsKSx8HT9s6uB3oeRmdNreiXYFtPiJVEkvxW2X2rDim9zvCKzafdqOFu2eIcpXUtSVtql6fduNZjx7Z81EQt8LRmWQPNoNDkUgAQD3gfTN70YoHgO3LRTd2v_hz9LERsLzIOP8QVOJxiJJEfcXK6kPprhC5mXvMPoWJDW1HBVAyAmcjtvLxTPn5OVOPIC43tGEoGWTRW6mFAeBL3hndnJ4_AFWcXemWM4I0dD-VOMElRcZqPTcNRF9UhMCUIzMSffii3du0ECmLRJ1wV7XaNRHdre6dBCGFpKS62pSgcVYHHxKoTIaOY3mvM2X6AkuVy9MHZQ_PiH0BwXayDFoZvK915AeYcKL_o0RFu8_ZvCoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_1",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_2",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/unfollow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"unfollow"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/get_following",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWJjOTNkNDdjNmY1OTYwODM5YWU5NWNiMzYxZTExZWM1ZTRjZDIyMjdiMTQ4YmJlMDllMzBjYmY2Mjc5ZjdjYzA0ZTUxYWU3YTk1OTcyODQiLCJpYXQiOjE2NTU5ODM1NjQuMTQyNzc2LCJuYmYiOjE2NTU5ODM1NjQuMTQyNzg0LCJleHAiOjE2ODc1MTk1NjQuMTM0MzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.UyUE6H35A7LmId-MaC2pvC1djKEw7QYdNlsMfahgIRdp4d9-9fDn2GksEWKwp__9S8D7zcKoqPzl3g5gGavFWvymfJECLwMnGYbDqzrtM4LIycPvDHN1Yu4NQSpnWdkQYsINOMwVV82k0RnekH4hHhq9Rcr-B75xNIkzgAxznHmPlZbY9PoHxdGX2nB5y5Yt4EoPbdCEwJN2IsDkZAjgCwCozggMhC3iSSyyGxjQ7s3oEZxVjD-3mUOOj86VxF9mmSQ_XAntoKau8wVhPgnbt90V35VjbPYbX0DQUkNXD8PXm1EUNSofB8yFmHUJD0cZQsKSx8HT9s6uB3oeRmdNreiXYFtPiJVEkvxW2X2rDim9zvCKzafdqOFu2eIcpXUtSVtql6fduNZjx7Z81EQt8LRmWQPNoNDkUgAQD3gfTN70YoHgO3LRTd2v_hz9LERsLzIOP8QVOJxiJJEfcXK6kPprhC5mXvMPoWJDW1HBVAyAmcjtvLxTPn5OVOPIC43tGEoGWTRW6mFAeBL3hndnJ4_AFWcXemWM4I0dD-VOMElRcZqPTcNRF9UhMCUIzMSffii3du0ECmLRJ1wV7XaNRHdre6dBCGFpKS62pSgcVYHHxKoTIaOY3mvM2X6AkuVy9MHZQ_PiH0BwXayDFoZvK915AeYcKL_o0RFu8_ZvCoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_1",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_2",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_following/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_following",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/get_follower",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWJjOTNkNDdjNmY1OTYwODM5YWU5NWNiMzYxZTExZWM1ZTRjZDIyMjdiMTQ4YmJlMDllMzBjYmY2Mjc5ZjdjYzA0ZTUxYWU3YTk1OTcyODQiLCJpYXQiOjE2NTU5ODM1NjQuMTQyNzc2LCJuYmYiOjE2NTU5ODM1NjQuMTQyNzg0LCJleHAiOjE2ODc1MTk1NjQuMTM0MzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.UyUE6H35A7LmId-MaC2pvC1djKEw7QYdNlsMfahgIRdp4d9-9fDn2GksEWKwp__9S8D7zcKoqPzl3g5gGavFWvymfJECLwMnGYbDqzrtM4LIycPvDHN1Yu4NQSpnWdkQYsINOMwVV82k0RnekH4hHhq9Rcr-B75xNIkzgAxznHmPlZbY9PoHxdGX2nB5y5Yt4EoPbdCEwJN2IsDkZAjgCwCozggMhC3iSSyyGxjQ7s3oEZxVjD-3mUOOj86VxF9mmSQ_XAntoKau8wVhPgnbt90V35VjbPYbX0DQUkNXD8PXm1EUNSofB8yFmHUJD0cZQsKSx8HT9s6uB3oeRmdNreiXYFtPiJVEkvxW2X2rDim9zvCKzafdqOFu2eIcpXUtSVtql6fduNZjx7Z81EQt8LRmWQPNoNDkUgAQD3gfTN70YoHgO3LRTd2v_hz9LERsLzIOP8QVOJxiJJEfcXK6kPprhC5mXvMPoWJDW1HBVAyAmcjtvLxTPn5OVOPIC43tGEoGWTRW6mFAeBL3hndnJ4_AFWcXemWM4I0dD-VOMElRcZqPTcNRF9UhMCUIzMSffii3du0ECmLRJ1wV7XaNRHdre6dBCGFpKS62pSgcVYHHxKoTIaOY3mvM2X6AkuVy9MHZQ_PiH0BwXayDFoZvK915AeYcKL_o0RFu8_ZvCoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_1",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_2",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_followers/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_followers",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ali@example.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
